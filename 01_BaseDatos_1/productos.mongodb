@@ -1,0 +1,94 @@
+// Crear la base de datos 
+use("dbTechStore")
+
+
+// Insertar documentos en colección equipos
+db.equipos.insertOne(
+    {
+    "Nombre": "Laptop Asus",
+    "Categoría": "Portátiles",
+    "Precio": 2500,
+    "Stock": 30,
+    "Accesorios": ["Cargador", "Funda de protección", "Ratón inalámbrico"]
+    });
+
+db.equipos.insertOne({
+    "Nombre": "Monitor LG",
+    "Categoría": "Monitores",
+    "Precio": 999,
+    "Stock": 20,
+    "Accesorios": ["Cable HDMI", "Base ajustable", "Adaptador de corriente"]
+});
+
+db.equipos.insertOne({
+    "Nombre": "Teclado Logitech",
+    "Categoría": "Teclados",
+    "Precio": 180,
+    "Stock": 30,
+    "Accesorios": ["Reposamuñecas", "Extractor de teclas", "Cable USB desmontable"]
+});
+
+db.equipos.insertOne({
+    "Nombre": "Impresora Epson",
+    "Categoría": "Impresoras",
+    "Precio": 1230,
+    "Stock": 100,
+    "Accesorios": ["Cartucho de tóner", "Cable USB", "Manual de usuario"]
+});
+
+db.equipos.insertOne({
+    "Nombre": "Tablet Lenovo",
+    "Categoría": "Tablets",
+    "Precio": 1750,
+    "Stock": 300,
+    "Accesorios": ["Cargador rápido", "Funda protectora", "Lápiz táctil"]
+});
+
+
+
+//Listar docs
+//db.equipos.find()
+
+// Insertar múltiples documentos en colección clientes
+db.clientes.insertMany([
+    {
+        "Código": "001",
+        "Nombre": "Juan",
+        "Apellido": "Pérez",
+        "Fecha de Nacimiento": "15/05/1990",
+        "Celular": "987654321",
+        "Categorías de interés": ["Laptops", "Monitores", "Impresoras"]
+    },
+    {
+        "Código": "002",
+        "Nombre": "Ana",
+        "Apellido": "Gómez",
+        "Celular": "987654322",
+        "Categorías de interés": ["Tablets", "Teclados", "Ratones", "Monitores"]
+    },
+    {
+        "Código": "003",
+        "Nombre": "Luis",
+        "Apellido": "Martínez",
+        "Fecha de Nacimiento": "30/11/1988",
+        "Celular": "987654323",
+        "Categorías de interés": ["Laptops", "Accesorios", "Impresoras", "Teclados"]
+    },
+    {
+        "Código": "004",
+        "Nombre": "María",
+        "Apellido": "López",
+        "Fecha de Nacimiento": "17/02/1988",
+        "Categorías de interés": ["Impresoras", "Monitores", "Proyectores"]
+    },
+    {
+        "Código": "005",
+        "Nombre": "Sofía",
+        "Apellido": "Ramírez",
+        "Fecha de Nacimiento": "25/09/1993",
+        "Celular": "987654326",
+        "Categorías de interés": ["Tablets", "Accesorios", "Software", "Monitores"]
+    }
+]);
+
+db.clientes.find()
