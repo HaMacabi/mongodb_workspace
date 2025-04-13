@@ -91,4 +91,5 @@ db.clientes.insertMany([
     }
 ]);
 
+//Listar
 db.clientes.find()
