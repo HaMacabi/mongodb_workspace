@@ -1,0 +1,40 @@
+use ("dbClothingStore");
+
+//Cambiar nombre de "Vestido de Verano" a "Vestido Elegante"
+db.prendas.updateOne(
+    { "Nombre": "Vestido de Verano" },
+    { $set: { "Nombre": "Vestido Elegante" } }
+  )
+
+/*
+db.prendas.updateOne(
+    { _id: 3 }, //consular a mongo por ID-
+    {
+        $set: {name: "Vestido Elegante"}
+    }
+)
+*/
+
+//Actualizar precio de "Casaca de Cuero" de 299.99 a 799.99
+db.prendas.updateOne(
+    { "Nombre": "Casaca de Cuero" },
+    { $set: { "Precio Unitario": 799.99 } }
+)
+
+//Actualizar nacimiento de Ana Gómez a "06/06/2006"
+db.clientes.updateOne(
+    { 
+      Nombre: "Ana",
+      Apellido: "Gómez"
+    },
+    { $set: { "Fecha de Nacimiento": "06/06/2006" } }
+  )
+
+//Cambiar email de Juan Pérez a "juan.pe@yahoo.com"
+db.clientes.updateOne(
+    { 
+      "Nombre": "Juan",
+      "Apellido": "Pérez"
+    },
+    { $set: { "Email": "juan.pe@yahoo.com" } }
+  )
