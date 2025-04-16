@@ -1,3 +1,23 @@
 //Crear BD y usar
 use ("dbClothingStore");
 
+//Eliminar doc de  prendas a través de _id
+//consultar para obtener _id de una prenda
+//db.prendas.findOne({ "Nombre": "Camisa Formal" })
+
+// eliminar usando _id obtenido
+//db.prendas.deleteOne({ "_id": ObjectId("67ff040c1d1c27f5668273b2") })
+
+//Eliminar prendas stock menor a 30
+//db.prendas.deleteMany({ "Stock": { $lt: 30 } })
+
+//Eliminar datos de María López de clientes
+db.clientes.deleteOne({
+    _id: "C004"
+})
+
+//Eliminar todos los docs de prendas
+db.prendas.deleteMany({})
+
+//Eliminar coleccion clientes
+db.clientes.drop()
