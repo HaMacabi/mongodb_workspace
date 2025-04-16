@@ -1,0 +1,97 @@
+//Crear BD y usar
+use ("dbClothingStore");
+
+/*
+//Coleccion prendas y documentos uno por uno
+db.prendas.insertOne(
+  {
+    "Nombre": "Camisa Formal",
+    "Marca": "H&M",
+    "Categorías": ["Ropa Formal", "Camisas", "Hombres"],
+    "Stock": 50,
+    "Precio Unitario": 35.50
+  })
+    
+  db.prendas.insertOne({
+    "Nombre": "Pantalones Jeans",
+    "Marca": "Levi's",
+    "Categorías": ["Ropa Casual", "Pantalones", "Unisex"],
+    "Stock": 100,
+    "Precio Unitario": 45.00
+  })
+  
+  db.prendas.insertOne({
+    "Nombre": "Vestido de Verano",
+    "Marca": "Zara",
+    "Categorías": ["Ropa Casual", "Vestidos", "Mujeres"],
+    "Stock": 30,
+    "Precio Unitario": 29.99
+  })
+  
+  db.prendas.insertOne({
+    "Nombre": "Chompa de Lana",
+    "Marca": "Unidio",
+    "Categorías": ["Ropa de Invierno", "Chompas", "Unisex", "Mujeres"],
+    "Stock": 75,
+    "Precio Unitario": 89.99
+  })
+  
+  db.prendas.insertOne({
+    "Nombre": "Casaca de Cuero",
+    "Marca": "Gucci",
+    "Categorías": ["Ropa de Invierno", "Unisex"],
+    "Stock": 20,
+    "Precio Unitario": 299.99
+  })
+
+  //Listar
+  db.prendas.find()
+*/
+
+//Coleccion clientes y documentos másivos
+  db.clientes.insertMany([
+    {
+      _id: "C001",
+      Nombre: "Juan",
+      Apellido: "Pérez",
+      "Fecha de Nacimiento": "15/05/1990",
+      Email: "juan.perez@gmail.com",
+      "Categorías de interés": ["Ropa Formal", "Camisas", "Hombres"]
+    },
+
+    {
+      _id: "C002",
+      "Nombre": "Ana",
+      "Apellido": "Gómez",
+      "Email": "ana.gomez@outlook.com",
+      "Categorías de interés": ["Ropa Casual", "Vestidos", "Mujeres", "Accesorios"]
+    },
+
+    {
+      _id: "C003",
+      "Nombre": "Luis",
+      "Apellido": "Martínez",
+      "Fecha de Nacimiento": "30/11/1988"
+    },
+
+    {
+      _id: "C004",
+      "Nombre": "María",
+      "Apellido": "López",
+      "Fecha de Nacimiento": "17/02/1988",
+      "Email": "maria.lopez@yahoo.com",
+      "Categorías de interés": ["Ropa de Invierno", "Chompas"]
+    },
+
+    {
+      _id: "C005",
+      "Nombre": "Sofía",
+      "Apellido": "Ramírez",
+      "Fecha de Nacimiento": "25/09/1993",
+      "Email": "sofia.ramirez@outlook.com",
+      "Categorías de interés": ["Ropa Casual", "Accesorios", "Mujeres"]
+    }
+  ])
+
+  //Listar
+  db.clientes.find()
