@@ -1,0 +1,26 @@
+//Crear BD y usar
+use ("dbClothingStore");
+
+//Listar 3 primeros documentos de prendas
+db.prendas.find().limit(3);
+
+//Listar 2 primeros documentos de clientes
+db.clientes.find().limit(2);
+
+//Listar algunos atributos
+db.clientes.find(
+    {}, // Filtro vacío (selecciona todos los docs)
+    {
+      "_id": 0, // Excluye _id de respuesta
+      "Nombre": 1, //Incluye todos los demás
+      "Apellido": 1,
+      "Email": 1,
+      "Categorías de interés": 1
+    }
+  )
+
+
+//Listar prendas cuya stock sea igual o mayor que 50
+  db.prendas.find(
+    { "Stock": { $gte: 50 } }
+  )
